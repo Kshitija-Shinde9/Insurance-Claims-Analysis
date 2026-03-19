@@ -16,11 +16,13 @@ http://127.0.0.1:8050
 ## Dashboard Screenshots
 
 ### Overview - Header, Filters and KPI Cards
-![WhatsApp Image 2026-03-18 at 9 27 23 AM](https://github.com/user-attachments/assets/2261ba4b-b6fe-4236-b19f-7426ee747e22)
+
+![plotly_1](https://github.com/user-attachments/assets/cccd57dd-f4f9-4a80-8472-0abcce34e221)
 
 
 ### Charts - Segment, Policy, Premium and Risk Analysis
-![WhatsApp Image 2026-03-18 at 9 27 23 AM (1)](https://github.com/user-attachments/assets/1538a9ef-d08d-486d-9505-05cb63ba2052)
+
+![plotly2](https://github.com/user-attachments/assets/36105e7c-c652-423e-9a0b-967f8d061aff)
 
 
 ---
