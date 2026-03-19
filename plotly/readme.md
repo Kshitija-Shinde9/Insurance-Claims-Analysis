@@ -29,7 +29,7 @@ http://127.0.0.1:8050
 
 ![plotly2](https://github.com/user-attachments/assets/36105e7c-c652-423e-9a0b-967f8d061aff)
 
-### Charts - Segment, Policy, Premium and Risk Analysis
+### Charts - Segment, Policy, Premium and Risk Analysis with filter change
 
 <img width="1280" height="832" alt="image" src="https://github.com/user-attachments/assets/07450576-a5d3-4f4a-941b-1fa986bdf0e3" />
 
