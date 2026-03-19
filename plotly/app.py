@@ -3,15 +3,9 @@ import numpy as np
 from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 
-# =========================
-# 1. LOAD DATA
-# =========================
 FILE_PATH = "data_synthetic_.csv"
 df = pd.read_csv(FILE_PATH)
 
-# =========================
-# 2. PREPROCESSING
-# =========================
 df = df.drop_duplicates()
 
 missing_cols = ["Age", "Income Level", "Premium Amount", "Credit Score"]
@@ -31,7 +25,6 @@ if "Customer ID" in df.columns:
 df = df.dropna(subset=["Policy Start Year"])
 df["Policy Start Year"] = df["Policy Start Year"].astype(int)
 
-# Optional outlier capping
 def cap_outliers_iqr(data, col):
     q1 = data[col].quantile(0.25)
     q3 = data[col].quantile(0.75)
@@ -45,9 +38,6 @@ for col in ["Premium Amount", "Income Level", "Credit Score"]:
     if col in df.columns:
         cap_outliers_iqr(df, col)
 
-# =========================
-# 3. CONFIG
-# =========================
 segment_colors = {
     "Segment1": "#4C78A8",
     "Segment2": "#F58518",
@@ -63,9 +53,6 @@ risk_options = sorted(df["Risk Profile"].dropna().unique())
 min_year = int(df["Policy Start Year"].min())
 max_year = int(df["Policy Start Year"].max())
 
-# =========================
-# 4. APP
-# =========================
 app = Dash(__name__)
 app.title = "Customer Segmentation Dashboard"
 
@@ -120,7 +107,6 @@ app.layout = html.Div(
             ]
         ),
 
-        # Filters
         html.Div(
             style={
                 "display": "grid",
@@ -179,7 +165,6 @@ app.layout = html.Div(
             ]
         ),
 
-        # KPIs
         html.Div(
             style={
                 "display": "grid",
@@ -195,7 +180,6 @@ app.layout = html.Div(
             ]
         ),
 
-        # Graphs
         html.Div(
             style={
                 "display": "grid",
@@ -214,9 +198,6 @@ app.layout = html.Div(
     ]
 )
 
-# =========================
-# 5. CALLBACK
-# =========================
 @app.callback(
     Output("kpi_total", "children"),
     Output("kpi_premium", "children"),
@@ -249,7 +230,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
         ])
         return empty_card, empty_card, empty_card, empty_card, empty_fig, empty_fig, empty_fig, empty_fig, empty_fig, empty_fig
 
-    # KPIs
     kpi_total = html.Div([
         html.Div("Filtered Customers", style={"color": MUTED, "fontSize": "14px"}),
         html.H2(f"{len(filtered_df):,}", style={"margin": "8px 0 0 0", "color": TEXT})
@@ -278,7 +258,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
         title_font=dict(size=18),
     )
 
-    # 1. Segment count
     seg_counts = filtered_df["Segmentation Group"].value_counts().reset_index()
     seg_counts.columns = ["Segmentation Group", "Count"]
 
@@ -296,7 +275,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
     fig1.update_xaxes(title="Segmentation Group")
     fig1.update_yaxes(title="Count")
 
-    # 2. Policy type donut
     policy_counts = filtered_df["Policy Type"].value_counts().reset_index()
     policy_counts.columns = ["Policy Type", "Count"]
 
@@ -310,7 +288,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
     fig2.update_traces(textinfo="percent+label", pull=[0.02] * len(policy_counts))
     fig2.update_layout(**common_layout)
 
-    # 3. Premium box
     fig3 = px.box(
         filtered_df,
         x="Segmentation Group",
@@ -324,7 +301,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
     fig3.update_xaxes(title="Segmentation Group")
     fig3.update_yaxes(title="Premium Amount")
 
-    # 4. Credit score histogram
     fig4 = px.histogram(
         filtered_df,
         x="Credit Score",
@@ -339,7 +315,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
     fig4.update_xaxes(title="Credit Score")
     fig4.update_yaxes(title="Frequency")
 
-    # 5. Heatmap
     heatmap_data = filtered_df.pivot_table(
         values="Premium Amount",
         index="Risk Profile",
@@ -358,7 +333,6 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
     fig5.update_xaxes(title="Segmentation Group")
     fig5.update_yaxes(title="Risk Profile")
 
-    # 6. Line chart
     year_counts = (
         filtered_df.groupby("Policy Start Year")
         .size()
@@ -380,8 +354,5 @@ def update_dashboard(selected_segments, selected_policies, selected_risks, selec
 
     return kpi_total, kpi_premium, kpi_credit, kpi_tenure, fig1, fig2, fig3, fig4, fig5, fig6
 
-# =========================
-# 6. RUN
-# =========================
 if __name__ == "__main__":
     app.run(debug=True)
