@@ -66,7 +66,6 @@ Insurance-Customer-Segmentation/
 │
 ├── README.md                        # This file
 ├── requirements.txt                 # Python dependencies
-├── .gitignore                       # Files to exclude from git
 │
 ├── data/                            # ← Place your CSV files here
 │   ├── data_synthetic_.csv          # Main synthetic dataset 
