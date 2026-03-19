@@ -1,11 +1,11 @@
-# 🛡️ Insurance Customer Segmentation
-### DATA 230 — Final Project
+# Insurance Customer Segmentation
+### DATA 230 — Project
 
 > Predictive customer segmentation for an insurance dataset using exploratory data analysis, clustering, and interactive dashboards.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [Project Overview](#project-overview)
 - [Objectives](#objectives)
 - [Dataset](#dataset)
@@ -14,13 +14,12 @@
 - [Running the Dashboard](#running-the-dashboard)
 - [Key Results & Findings](#key-results--findings)
 - [Tableau Dashboards](#tableau-dashboards)
-- [Team Members](#team-members)
 
 ---
 
 ## Project Overview
 
-This project analyzes a synthetic insurance customer dataset of **53,503 customers** to identify meaningful customer segments based on demographics, financial behavior, policy choices, and risk profiles. The goal is to provide actionable insights for targeted marketing, risk management, and product personalization in the insurance industry.
+This project analyzes a synthetic insurance customer dataset of unique **53,503 customers** to identify meaningful customer segments based on demographics, financial behavior, policy choices, and risk profiles. The goal is to provide actionable insights for targeted marketing, risk management, and product personalization in the insurance industry.
 
 The project spans the full data science pipeline — from raw data cleaning and EDA to clustering-based segmentation, interactive visualization via a Plotly Dash dashboard, and business-facing Tableau dashboards.
 
@@ -40,8 +39,8 @@ The project spans the full data science pipeline — from raw data cleaning and 
 
 | Property | Details |
 |---|---|
-| File | `data_synthetic_.csv` |
-| Records | 53,503 customers |
+| File | `data_synthetic_.csv` and `insurance_dataset.csv`|
+| Records | 53,503+ customers |
 | Features | 30+ columns |
 | Source | Synthetic insurance dataset |
 
@@ -56,7 +55,7 @@ The project spans the full data science pipeline — from raw data cleaning and 
 | Preferences | Preferred Communication Channel, Preferred Contact Time, Preferred Language |
 | Target | Segmentation Group (Segment1–Segment5) |
 
-> **Note:** Raw data files are not committed to this repository due to size/privacy considerations. Place `data_synthetic_.csv` and `insurance_dataset.csv` in the `/data` folder before running any code.
+> **Note:** Place `data_synthetic_.csv` and `insurance_dataset.csv` in the `/data` folder before running any code.
 
 ---
 
@@ -70,8 +69,8 @@ Insurance-Customer-Segmentation/
 ├── .gitignore                       # Files to exclude from git
 │
 ├── data/                            # ← Place your CSV files here
-│   ├── data_synthetic_.csv          # Main synthetic dataset (not tracked)
-│   └── insurance_dataset.csv        # Secondary dataset (not tracked)
+│   ├── data_synthetic_.csv          # Main synthetic dataset 
+│   └── insurance_dataset.csv        # Secondary dataset 
 │
 ├── notebooks/
 │   └── DATA_230_Project.ipynb       # Main EDA & analysis notebook
@@ -108,8 +107,7 @@ cd Insurance-Customer-Segmentation
 
 ```bash
 python -m venv venv
-source venv/bin/activate        # macOS/Linux
-venv\Scripts\activate           # Windows
+source venv/bin/activate        
 ```
 
 ### 3. Install Dependencies
@@ -197,33 +195,7 @@ Two interactive Tableau Public dashboards complement the Python analysis:
 
 | Dashboard | Link |
 |---|---|
-| 🔶 **Risk View & Occupation Analytics** | [View on Tableau Public](https://public.tableau.com/app/profile/kshitija.dipakrao.shinde/viz/RiskViewOccupationAnalyticsDashboard/RiskViewOccupationAnalyticsDashboard?publish=yes) |
-| 🔷 **Customer Risk & Revenue Intelligence** | [View on Tableau Public](https://public.tableau.com/app/profile/kshitija.dipakrao.shinde/viz/CustomerRiskRevenueIntelligenceDashboard/CustomerRiskRevenueIntelligenceDashboard?publish=yes) |
+| **Risk View & Occupation Analytics** | [View on Tableau Public](https://public.tableau.com/app/profile/kshitija.dipakrao.shinde/viz/RiskViewOccupationAnalyticsDashboard/RiskViewOccupationAnalyticsDashboard?publish=yes) |
+| **Customer Risk & Revenue Intelligence** | [View on Tableau Public](https://public.tableau.com/app/profile/kshitija.dipakrao.shinde/viz/CustomerRiskRevenueIntelligenceDashboard/CustomerRiskRevenueIntelligenceDashboard?publish=yes) |
 
 ---
-
-## Team Members
-
-| Name | Contributions |
-|---|---|
-| **Member 1** | EDA, Jupyter Notebook, data preprocessing |
-| **Member 2** | Plotly Dash dashboard (`app.py`), KPI design |
-| **Member 3** | Tableau dashboards, presentation slides |
-
-> Replace "Member 1/2/3" with actual names before submitting.
-
----
-
-## Technologies Used
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-EDA-lightblue?logo=pandas)
-![Plotly](https://img.shields.io/badge/Plotly-Dash-purple?logo=plotly)
-![Tableau](https://img.shields.io/badge/Tableau-Public-orange?logo=tableau)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
-
----
-
-## License
-
-This project was developed for academic purposes as part of the DATA 230 course.
