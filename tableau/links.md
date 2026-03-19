@@ -10,6 +10,7 @@
 - Supports interactive filtering for deep-dive analysis
 
 **Screenshot:**
+
 <img width="825" height="821" alt="image" src="https://github.com/user-attachments/assets/5f93a65e-9882-4247-b4e0-d307d2b355a6" />
 
 
@@ -25,5 +26,6 @@
 - Income Level as a color scale overlay
 
 **Screenshot:**
+
 <img width="825" height="650" alt="image" src="https://github.com/user-attachments/assets/fef0c512-53d8-4d11-8086-95bd66644bb1" />
 
