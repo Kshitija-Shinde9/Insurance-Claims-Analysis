@@ -487,7 +487,7 @@ reports/ieee/figures/
 
 ## Team
 
-**Group 8 — The Data Refinery Team**
+**Group 8**
 
 - Prathmesh Mankar
 - Kshitija Shinde
@@ -495,19 +495,6 @@ reports/ieee/figures/
 - Vrishin Dharmesh Kunnatham Parambath
 
 ---
-
-## Notes About Large Files
-
-Some CSV files and model files may be too large for GitHub. If GitHub does not allow uploading them, keep the folder structure and use the scripts to recreate them.
-
-Recommended `.gitignore` entries:
-
-```gitignore
-__pycache__/
-*.pyc
-.venv/
-.DS_Store
-*.joblib
 *.pkl
 ```
 
