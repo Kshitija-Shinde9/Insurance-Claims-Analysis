@@ -15,7 +15,11 @@ The script:
 3. Encodes categorical columns
 4. Trains a Random Forest classifier
 5. Prints model accuracy, classification report, confusion matrix, and feature importance
-6. Saves trained model artifacts for later use in the dashboard
+6. Saves trained model artifacts for later use in the dashboard:
+   - `rf_model.pkl` — trained Random Forest model  
+   - `encoders.pkl` — label encoders for categorical columns  
+   - `features.pkl` — ordered feature list used by the model  
+   - `feature_importance.csv` — feature importance results
 
 ## Dataset path
 
