@@ -255,22 +255,8 @@ Insurance-Claims-Analysis/
 │       ├── eda/
 │       └── modeling/
 │
-├── docs/
-│   ├── CANVAS_FINAL_REQUIREMENTS_MAPPING.md
-│   ├── FINAL_EXECUTION_ROADMAP.md
-│   ├── FINAL_QA_PREP.md
-│   ├── FREMTPL2_DATA_DICTIONARY.md
-│   ├── MIDTERM_AUDIT_AND_FINAL_GAP_ANALYSIS.md
-│   ├── MODELING_DESIGN_EXPECTED_CLAIM_COST.md
-│   ├── TECHNICAL_PIPELINE_EXPECTED_CLAIM_COST.md
-│   └── powerbi/
-│       └── POWER_BI_DASHBOARD_GUIDE.md
-│
-└── reports/
-    └── ieee/
-        ├── DATA230_Final_Report_TwoColumn_v5_qa_fixed.docx
-        ├── DATA230_Final_Report_TwoColumn_v5_qa_fixed.pdf
-        └── figures/
+└── report/
+    └──Final_Report 
 ```
 
 ---
