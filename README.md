@@ -440,7 +440,7 @@ Important note: this classifier is based mainly on BonusMalus-derived risk tiers
 
 | Tool | Purpose |
 |---|---|
-| Power BI | Portfolio risk dashboard, claim-rate heatmaps, BonusMalus trends, region and vehicle-brand risk |
+| Power BI | Portfolio risk dashboard, claim-rate heatmaps, BonusMalus trends, region and vehicle-brand risk |[View Dashboard]https://app.powerbi.com/links/cpfOmhv2tK?ctid=e85c5307-76b1-4c48-bc5d-e88373dda261&pbi_source=linkShare |
 | Streamlit | ML results dashboard, risk-decile calibration, feature importance, and policy risk predictor |
 
 Across the midterm and final project, the work uses four dashboard/visualization tools:

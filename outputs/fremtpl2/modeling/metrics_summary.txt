@@ -1,0 +1,5 @@
+                      Model        MAE         RMSE        R2  TweedieDeviance_p1_5
+              Mean baseline 767.464117 30402.776264 -0.000002            146.934308
+    Poisson x Gamma product 641.133883 30402.154633  0.000039            142.842504
+       Tweedie pure premium 584.022298 30403.174646 -0.000028            163.565578
+HistGradientBoosting sample 674.692098 30373.579106  0.001918           6882.953160

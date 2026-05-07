@@ -1,0 +1,25 @@
+Expected Claim Cost modeling run summary
+
+Rows: 678,013
+Train rows: 542,410
+Test rows: 135,603
+Features: VehAge, DrivAge, BonusMalus, Density, Area, VehPower, VehBrand, VehGas, Region
+Primary target: PurePremium = TotalClaimAmount / Exposure
+Best model by RMSE: HistGradientBoosting sample
+
+Metrics:
+                      Model        MAE         RMSE        R2  TweedieDeviance_p1_5
+              Mean baseline 767.464117 30402.776264 -0.000002            146.934308
+    Poisson x Gamma product 641.133883 30402.154633  0.000039            142.842504
+       Tweedie pure premium 584.022298 30403.174646 -0.000028            163.565578
+HistGradientBoosting sample 674.692098 30373.579106  0.001918           6882.953160
+
+Generated ML visuals:
+01_model_comparison_rmse.png
+02_actual_vs_predicted_pure_premium.png
+03_residuals_vs_predicted.png
+04_prediction_error_distribution.png
+05_risk_decile_calibration.png
+06_permutation_feature_importance.png
+07_severity_actual_vs_predicted.png
+08_frequency_calibration.png

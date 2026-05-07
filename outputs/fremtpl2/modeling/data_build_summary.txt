@@ -1,0 +1,18 @@
+freMTPL2 modeling file summary
+
+Raw frequency rows: 678,013
+Raw severity claim rows: 26,639
+Final modeling rows: 678,013
+Final columns: 23
+Unique policies: 678,013
+Policies with recorded ClaimNb > 0: 34,060
+Policies with joined claim amount > 0: 24,944
+Rows with ClaimNb / severity-row mismatch: 9,117
+Total exposure: 358,499.45
+Total claim count: 36,102
+Total claim amount: 59,909,216.50
+Portfolio claim frequency: 0.100703
+Portfolio pure premium: 167.1110
+
+Output CSV:
+/Users/kshitijarohandeshmukh/Downloads/DATA230_Data_Visualization/group_project/Group Project final/gp-v1/Kshitija-Data-Visualization-Project/data/processed/fremtpl2_policy_claims.csv

@@ -1,0 +1,13 @@
+EDA summary
+
+Rows analyzed: 678,013
+Columns: 23
+Policies with no claim count: 643,953
+Policies with at least one claim count: 34,060
+Share with no claim count: 94.9765%
+Total exposure: 358,499.45
+Total claim amount: 59,909,216.50
+Mean pure premium: 383.2608
+Weighted pure premium: 167.1110
+
+Generated EDA figures: 10
