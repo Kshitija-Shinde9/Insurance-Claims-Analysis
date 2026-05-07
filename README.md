@@ -494,7 +494,3 @@ reports/ieee/figures/
 - Vrishin Dharmesh Kunnatham Parambath
 
 ---
-*.pkl
-```
-
-If large data files are not uploaded, explain in `data/README.md` how to download or recreate them.
